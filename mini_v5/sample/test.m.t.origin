@@ -1,0 +1,48 @@
+label main
+begin
+var a
+var b
+a = 1
+// while(a<10)
+var t0
+t0 = (a < 10)
+ifz t0 goto L5
+label L4
+//
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = a * 2
+b = t2
+// while(b<7)
+var t3
+t3 = (b < 7)
+ifz t3 goto L3
+label L2
+// if(b<7)
+var t4
+t4 = (b < 7)
+ifz t4 goto L1
+//
+var t5
+t5 = b + 1
+b = t5
+goto L3
+// if(b<7)
+label L1
+// while(b<7)
+t3 = (b<7)
+if t3 goto L2
+label L3
+//
+goto L5
+// while(a<10)
+t0 = (a < 10)
+if t0 goto L4
+label L5
+//
+actual b
+call PRINTN
+return 0
+end

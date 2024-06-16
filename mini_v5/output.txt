@@ -1,0 +1,2932 @@
+bb_num:3,round:1
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+t0 = (a < 1000)
+ifz t0 goto L2
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = a * 2
+b = t2
+c = 5
+t0 = (a < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+t0 = (a < 1000)
+ifz t0 goto L2
+var t5
+t5 = a * 2
+b = t5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+c = 5
+t0 = (a < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+t0 = 1
+ifz 1 goto L2
+var t5
+t5 = 2
+b = 2
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+c = 5
+t0 = (a < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+t0 = 1
+ifz 1 goto L2
+var t5
+t5 = 2
+b = 2
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+c = 5
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+var t5
+b = 2
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+c = 5
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+var t5
+b = 2
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+c = 5
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+var t5
+b = 2
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+c = 5
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+var t5
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+bb_num:3,round:2
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+var t5
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+var t5
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+var t5
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+var t5
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+bb_num:3,round:3
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+bb_num:3,round:4
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+bb_num:3,round:5
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+bb_num:3,round:6
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+bb_num:3,round:7
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+bb_num:3,round:8
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+bb_num:3,round:9
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+bb_num:3,round:10
+	 simple opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 strength reduce done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 const_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 copy_propagaton_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 deadcode_opt done!
+	 deadvar_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 local_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 global_comsub_opt done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+	 induction variable elimation done!
+label main
+begin
+var a
+var b
+var c
+a = 1
+var t0
+b = 2
+c = 5
+label L1
+var t1
+t1 = a + 1
+a = t1
+var t2
+t2 = b + 2
+b = t2
+t0 = (t1 < 1000)
+if t0 goto L1
+label L2
+var t3
+actual c
+actual b
+t3 = call add
+b = t3
+actual b
+call PRINTN
+end
+label add
+begin
+formal x
+formal y
+var t4
+t4 = x + y
+return t4
+end
+***************************************************************
+opt done!
